@@ -13,8 +13,7 @@ app.post('/login', (req, res) => {
 
     authRepo.login(user, (state) => {
         if (!state) {
-            return res.status(400).json({
-                status: 400,
+            return res.status(200).json({
                 success: false
             })
         }
